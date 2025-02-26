@@ -1,4 +1,3 @@
-import os
 """
 Django settings for primo_progetto project.
 
@@ -12,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-#xd!i(zcqgl4=-%zk2shb-9er*4mma*h&qaspwn_8mlp^@+dq%'
+SECRET_KEY = 'django-insecure-l#0he24!z3rma4(#=h(_0ev7*va5g73ddttdvz@f+ntnk*$@v$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'prima_app',
+    'seconda_app',
+    'news',
+    'corsi_formazione'
 ]
 
 MIDDLEWARE = [
@@ -56,7 +59,11 @@ ROOT_URLCONF = 'primo_progetto.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'prima_app/templates', 'primo_progetto/templates')  ],
+        'DIRS':  [os.path.join(BASE_DIR, 'prima_app/templates'),
+                  os.path.join(BASE_DIR, 'seconda_app/templates'),
+                  os.path.join(BASE_DIR, 'news/templates'),
+                  #os.path.join(BASE_DIR, 'corsi_formazione/templates'),
+                  os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -64,7 +71,6 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                
             ],
         },
     },
@@ -106,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
-LANGUAGE_CODE = 'it-it'
+LANGUAGE_CODE = 'it-IT'
 
 TIME_ZONE = 'UTC'
 
