@@ -1,0 +1,16 @@
+{% extends 'base.html'%}
+{% block title%}
+    Index
+{%endblock title%}
+{%block content%}
+    <h4>Index:</h4>
+    <p>Benvenuto nella piattaforma di evento culturali</p>
+    <ol>
+        <li><a href="{% url 'eventi:query_a'%}">Elenco per data</a></li>
+        <li><a href="{% url 'eventi:query_b'%}">Dettagli eventi</a></li>
+        <li><a href="{% url 'eventi:query_c'%}">Eventi dopo 1 Giugno</a></li>
+        <li><a href="{% url 'eventi:query_d'%}">Eventi con meno di 80 posti</a></li>
+        <li><a href="{% url 'eventi:query_e'%}">Eventi che terminano entro il 31 Maggio</a></li>
+        <li><a href="{% url 'eventi:query_f'%}">Evento con più posti, meno posti e posti totali</a></li>
+    </ol>
+{%endblock content%}

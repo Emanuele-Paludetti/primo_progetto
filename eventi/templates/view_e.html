@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+
+{% block title %}
+    Risposte Query
+{% endblock title %}
+
+{% block content %}
+{% for evento in query_e %}
+<h5>Evento: {{evento}}</h5>
+{% endfor %}
+<hr>
+{% endblock content %}

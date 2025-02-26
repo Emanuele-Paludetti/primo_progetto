@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+
+{% block title %} Eventi | query_f {%endblock title%}
+
+{%block content%}
+    <h2>Statistiche avanzate sugli eventi</h2>
+    <br>
+    <ul>
+        <li>Eventi con più posti: {{query_max.titolo}} con {{query_max.posti_disponibili}} posti disponibili</li>
+        <li>Eventi con meno posti: {{query_min.titolo}} con {{query_min.posti_disponibili}} posti disponibili</li>
+        <li>Totale posti: {{query_tot}}</li>
+    </ul>
+
+{%endblock content%}

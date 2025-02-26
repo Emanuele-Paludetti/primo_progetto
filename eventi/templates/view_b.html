@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+
+{% block title%}
+    Eventi
+{%endblock title%}
+
+{%block content%}
+<h4>Eventi:</h4>
+
+    {% for evento in query_b %}
+
+    <p><strong>Titolo: </strong>{{ evento.titolo }}</p>
+    <p><strong>Contenuto: </strong>{{ evento.descrizione }}</p>
+    <p><strong>Autore: </strong>{{ evento.data_inizio }}</p>
+    <p><strong>Autore: </strong>{{ evento.data_fine }}</p>
+    <p><strong>Autore: </strong>{{ evento.posti_disponibili }}</p>
+    <hr>
+    
+    {%endfor%}
+    {%endblock content%}
